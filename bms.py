@@ -47,7 +47,7 @@ repub_discovery = 0
 bms_version = ''
 bms_sn = ''
 pack_sn = ''
-packs = 1
+packs = 16
 cells = 13
 temps = 6
 

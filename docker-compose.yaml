@@ -4,7 +4,8 @@ services:
     build: 
       context: .
     restart: unless-stopped
+    network_mode: host
     privileged: true
     volumes:
       - ./config.yaml:/workdir/config.yaml
-      - /dev:/dev
+      - /dev/ttyUSB1:/dev/ttyUSB1
