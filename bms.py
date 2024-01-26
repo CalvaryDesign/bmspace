@@ -69,6 +69,8 @@ def main():
     bms_serial = config['bms_serial']
     code_running = True
     scan_interval = config['scan_interval']
+    debug_output = config['debug_output']
+    print_initial = True
 
     def bms_connect(address, port):
 
@@ -803,7 +805,6 @@ def main():
     bms,bms_connected = bms_connect(config['bms_ip'],config['bms_port'])
 
     client.publish(config['mqtt_base_topic'] + "/availability","offline")
-    print_initial = True
 
     success, data = bms_getVersion(bms)
     if success != True:
