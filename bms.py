@@ -36,6 +36,8 @@ def mqtt_setup():
     time.sleep(2)
     return client
 
+mqtt_connected = False
+
 def on_connect(client, userdata, flags, rc):
     print("MQTT connected with result code "+str(rc))
     client.will_set(config['mqtt_base_topic'] + "/availability", "offline", qos=0, retain=False)
@@ -819,6 +821,7 @@ def main():
     while code_running == True:
 
         if bms_connected == True:
+            global mqtt_connected
             if mqtt_connected == True:
 
                 success, data = bms_getAnalogData(bms,batNumber=255)
