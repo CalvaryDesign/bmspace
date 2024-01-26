@@ -149,7 +149,7 @@ def main():
         
     def chksum_calc(data):
 
-        global debug_output
+        nonlocal debug_output
         chksum = 0
 
         try:
@@ -204,7 +204,7 @@ def main():
 
     def bms_parse_data(inc_data):
 
-        global debug_output
+        nonlocal debug_output
 
         try:
             
@@ -329,7 +329,7 @@ def main():
     def bms_request(bms, ver=b"\x32\x35",adr=b"\x30\x31",cid1=b"\x34\x36",cid2=b"\x43\x31",info=b"",LENID=False):
 
         global bms_connected
-        global debug_output
+        nonlocal debug_output
         
         request = b'\x7e'
         request += ver
@@ -439,7 +439,7 @@ def main():
     
     def bms_getAnalogData(bms,batNumber):
 
-        global print_initial
+        nonlocal print_initial
         global cells
         global temps
         global packs
