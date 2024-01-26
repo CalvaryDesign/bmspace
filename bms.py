@@ -818,6 +818,7 @@ def main():
         print("Error retrieving BMS and pack serial numbers. This is required. Exiting...")
         quit()
 
+    repub_discovery = 0
     while code_running == True:
 
         if bms_connected == True:
