@@ -724,7 +724,7 @@ def main():
                 instructionState = ord(bytes.fromhex(inc_data[byte_index:byte_index+2].decode('ascii')))
                 client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/current_limit",str(instructionState>>0 & 1))
                 client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/charge_fet",str(instructionState>>1 & 1))
-                client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/discharge_fet",str(instructionState>>2 & 1))
+                client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/discharge_fet",str(instructionState>>4 & 1))
                 client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/pack_indicate",str(instructionState>>3 & 1))
                 client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/reverse",str(instructionState>>4 & 1))
                 client.publish(config['mqtt_base_topic'] + "/pack_" + str(p) + "/ac_in",str(instructionState>>5 & 1))
