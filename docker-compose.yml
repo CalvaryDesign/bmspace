@@ -1,0 +1,20 @@
+version: '3'
+services:
+  bms_hv:
+    build: 
+      context: .
+    restart: unless-stopped
+    network_mode: host
+    privileged: true
+    volumes:
+      - ./config_hv.yaml:/workdir/config.yaml
+      - /dev/ttyUSB1:/dev/ttyUSB1
+  bms_lv:
+    build: 
+      context: .
+    restart: unless-stopped
+    network_mode: host
+    privileged: true
+    volumes:
+      - ./config.yaml:/workdir/config.yaml
+      - /dev/ttyUSB2:/dev/ttyUSB2

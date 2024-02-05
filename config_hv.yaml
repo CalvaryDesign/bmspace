@@ -19,7 +19,7 @@ options:
   mqtt_port: 1883
   mqtt_user: ""
   mqtt_password: ""
-  mqtt_base_topic: "atlas_bms"
+  mqtt_base_topic: "bms/hv"
   connection_type: "Serial"
   bms_ip: "127.0.0.1"
   bms_port: 5000
