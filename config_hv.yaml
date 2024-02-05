@@ -23,7 +23,7 @@ options:
   connection_type: "Serial"
   bms_ip: "127.0.0.1"
   bms_port: 5000
-  bms_serial: "/dev/ttyUSB1"
+  bms_serial: "/dev/bms_hv"
   scan_interval: 5
   debug_output: 0
 schema:

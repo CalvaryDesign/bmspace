@@ -8,7 +8,7 @@ services:
     privileged: true
     volumes:
       - ./config_hv.yaml:/workdir/config.yaml
-      - /dev/ttyUSB1:/dev/ttyUSB1
+      - /dev/bms_hv:/dev/bms_hv
   bms_lv:
     build: 
       context: .
@@ -17,4 +17,4 @@ services:
     privileged: true
     volumes:
       - ./config_lv.yaml:/workdir/config.yaml
-      - /dev/ttyUSB2:/dev/ttyUSB2
+      - /dev/bms_lv:/dev/bms_lv
