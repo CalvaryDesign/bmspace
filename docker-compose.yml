@@ -16,5 +16,5 @@ services:
     network_mode: host
     privileged: true
     volumes:
-      - ./config.yaml:/workdir/config.yaml
+      - ./config_lv.yaml:/workdir/config.yaml
       - /dev/ttyUSB2:/dev/ttyUSB2
